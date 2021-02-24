@@ -13,7 +13,9 @@ const PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// route to landing page
 
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'public/index.html')));
 
 
 
